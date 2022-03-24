@@ -2,15 +2,7 @@ plugins {
     id 'java'
 }
 
-bootJar {
-    enabled(false)
-}
-
-jar {
-    enabled(true)
-}
-
-group 'org.skysoo'
+group 'org.study'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -24,4 +16,8 @@ dependencies {
 
 test {
     useJUnitPlatform()
+}
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '7.4.1'
 }

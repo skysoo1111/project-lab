@@ -31,7 +31,7 @@ subprojects {
     apply plugin: 'org.springframework.boot'
     apply plugin: 'io.spring.dependency-management'
 
-    sourceCompatibility = 1.8
+    sourceCompatibility = 10
 
     repositories {
         mavenCentral()
@@ -98,6 +98,25 @@ project(':module1') {
 }
 
 project(':module2') {
+    // profile 은 local 이 default
+    ext.profile = (!project.hasProperty('profile') || !profile) ? 'loc' : profile
+
+    sourceSets {
+        main {
+            resources {
+                srcDirs "src/main/resources", "src/main/resources-$profile"
+            }
+        }
+    }
+
     dependencies {
+        implementation "org.springframework.boot:spring-boot-starter-data-jpa:$springboot_starter_version"
+        implementation "org.postgresql:postgresql:$postgresql_jdbc_version"
+    }
+}
+
+project(':java-basic') {
+    dependencies {
+        implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
     }
 }

@@ -1,10 +1,9 @@
 package com.skysoo.projectlab.repository;
 
-import com.skysoo.projectlab.domain.Role;
+import com.skysoo.projectlab.dto.Genre;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface RoleRepository extends JpaRepository<Role, Integer> {
-    Role findByMemberId(int MemberId);
+public interface GenreRepository extends JpaRepository<Genre, Integer> {
 }
