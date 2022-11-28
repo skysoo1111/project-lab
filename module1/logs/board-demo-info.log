@@ -1,25 +1,425 @@
-2022.02.17 15:23:33.816 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.11 on pseongsoo.local with PID 18660 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
- 2022.02.17 15:23:33.832 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
- 2022.02.17 15:23:33.870 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
- 2022.02.17 15:23:33.871 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
- 2022.02.17 15:23:34.601 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
- 2022.02.17 15:23:34.664 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 2 JPA repository interfaces.
- 2022.02.17 15:23:35.275 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
- 2022.02.17 15:23:35.287 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
- 2022.02.17 15:23:35.288 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
- 2022.02.17 15:23:35.288 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
- 2022.02.17 15:23:35.421 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
- 2022.02.17 15:23:35.422 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1551 ms
- 2022.02.17 15:23:35.639 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
- 2022.02.17 15:23:35.705 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
- 2022.02.17 15:23:35.872 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
- 2022.02.17 15:23:35.978 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
- 2022.02.17 15:23:36.262 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
- 2022.02.17 15:23:36.282 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
- 2022.02.17 15:23:36.803 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
- 2022.02.17 15:23:36.812 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
- 2022.02.17 15:23:37.890 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
- 2022.02.17 15:23:37.910 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
- 2022.02.17 15:23:37.938 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
- 2022.02.17 15:23:37.949 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.532 seconds (JVM running for 10.593)
+2022.08.16 16:59:08.398 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 16:59:08.415 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 16:59:08.416 [Test worker] [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.skysoo.projectlab.AppToDBTest]: AppToDBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ 2022.08.16 16:59:08.525 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.skysoo.projectlab.MainController for test class com.skysoo.projectlab.AppToDBTest
+ 2022.08.16 16:59:08.626 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 16:59:08.644 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@48b80b3e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@4a68b033, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@4d79705d, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@360f88a7, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@3e6694a3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@31004274, org.springframework.test.context.transaction.TransactionalTestExecutionListener@37fd2791, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7dfddb79, org.springframework.test.context.event.EventPublishingTestExecutionListener@77b49be9, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@44947489, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1a8b0225, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@93e341e, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@5a069d03, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3d518af6, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7f892d53]
+ 2022.08.16 16:59:08.989 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 16:59:09.006 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29355 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 16:59:09.009 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 16:59:09.675 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 16:59:09.740 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 55 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 16:59:10.256 [Test worker] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:00:18.585 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:00:18.608 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 29413 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:00:18.611 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:00:18.643 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:00:18.644 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:00:19.174 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:00:19.216 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:00:19.650 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:00:19.660 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:00:19.660 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:00:19.661 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:00:19.741 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:00:19.741 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1097 ms
+ 2022.08.16 17:00:19.873 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:00:19.935 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:00:20.087 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:00:20.182 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:00:21.401 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 17:00:21.414 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:01:57.021 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:01:57.050 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 29450 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:01:57.052 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:01:57.087 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:01:57.088 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:01:57.723 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:01:57.774 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 43 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:01:58.305 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:01:58.317 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:01:58.318 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:01:58.318 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:01:58.399 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:01:58.400 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1312 ms
+ 2022.08.16 17:01:58.541 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:01:58.602 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:01:58.845 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:01:58.978 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:01:59.253 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:01:59.276 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:01:59.934 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:01:59.943 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:02:01.001 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:02:01.002 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ 2022.08.16 17:02:01.014 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ 2022.08.16 17:02:01.017 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 17:02:01.029 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:04:06.376 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:04:06.402 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 29485 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:04:06.404 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:04:06.439 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:04:06.439 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:04:07.101 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:04:07.147 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:04:07.620 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:04:07.628 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:04:07.628 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:04:07.628 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:04:07.695 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:04:07.695 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1256 ms
+ 2022.08.16 17:04:07.824 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:04:07.880 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:04:08.049 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:04:08.144 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:04:08.406 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:04:08.426 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:04:09.062 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:04:09.070 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:04:10.099 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:04:10.100 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ 2022.08.16 17:04:10.114 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ 2022.08.16 17:04:10.116 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 17:04:10.129 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:04:57.186 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:04:57.213 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 29498 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:04:57.215 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:04:57.248 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:04:57.249 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:04:57.809 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:04:57.853 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 37 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:04:58.315 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:04:58.323 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:04:58.324 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:04:58.324 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:04:58.399 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:04:58.399 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1150 ms
+ 2022.08.16 17:04:58.531 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:04:58.588 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:04:58.745 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:04:58.863 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:04:59.120 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:04:59.142 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:04:59.768 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:04:59.776 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:05:00.825 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 17:05:00.844 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:05:00.873 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 17:05:00.885 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.019 seconds (JVM running for 9.896)
+ 2022.08.16 17:05:04.003 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:05:04.006 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ 2022.08.16 17:05:04.020 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ 2022.08.16 17:09:32.014 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:09:32.023 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:09:32.024 [Test worker] [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.skysoo.projectlab.AppToDBTest]: AppToDBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ 2022.08.16 17:09:32.135 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.skysoo.projectlab.MainController for test class com.skysoo.projectlab.AppToDBTest
+ 2022.08.16 17:09:32.228 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:09:32.249 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1d12ac1b, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@ef0ccdd, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3a9e0d1e, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@e2e69f6, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@6d47e5c, org.springframework.test.context.support.DirtiesContextTestExecutionListener@e4acc7f, org.springframework.test.context.transaction.TransactionalTestExecutionListener@44f6c655, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@396a76e4, org.springframework.test.context.event.EventPublishingTestExecutionListener@1ce9d90b, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@4498c7dd, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@36ae6575, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@5c99f812, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@eea530b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@ccedb24, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@498e8205]
+ 2022.08.16 17:09:32.582 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:09:32.603 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29577 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:09:32.607 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:09:33.310 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:09:33.375 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 53 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:09:33.848 [Test worker] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:09:55.799 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:09:55.813 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:09:55.814 [Test worker] [INFO] o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.skysoo.projectlab.AppToDBTest]: AppToDBTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+ 2022.08.16 17:09:55.948 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.skysoo.projectlab.MainController for test class com.skysoo.projectlab.AppToDBTest
+ 2022.08.16 17:09:56.063 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:09:56.088 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3216576e, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@671e2607, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@f717e13, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@76545d08, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7679d98b, org.springframework.test.context.support.DirtiesContextTestExecutionListener@60c1f75d, org.springframework.test.context.transaction.TransactionalTestExecutionListener@64449cb0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@302c312d, org.springframework.test.context.event.EventPublishingTestExecutionListener@8a11322, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@67b56674, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@2754c72e, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@76202fb0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@76981a55, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3a524434, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@3b3e89e7]
+ 2022.08.16 17:09:56.475 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:09:56.494 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29584 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:09:56.497 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:09:57.287 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:09:57.374 [Test worker] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 70 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:09:57.981 [Test worker] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 17:12:01.495 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:12:01.506 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:12:01.712 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:12:01.742 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@3c71e825, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7d2f8454, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@6a3a89a1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4debbfd0, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7ee85688, org.springframework.test.context.support.DirtiesContextTestExecutionListener@7f646025, org.springframework.test.context.transaction.TransactionalTestExecutionListener@412d99e9, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@51a8bb23, org.springframework.test.context.event.EventPublishingTestExecutionListener@6d48eb88, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@3171cb4c, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@1cbefe5a, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@85b2f4d, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@22658165, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@1df115ce, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@76567404]
+ 2022.08.16 17:12:02.194 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:12:02.228 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29623 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:12:02.231 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:12:02.726 [Test worker] [INFO] c.s.p.AppToDBTest - Started AppToDBTest in 0.906 seconds (JVM running for 7.913)
+ 2022.08.16 17:19:11.156 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:19:11.177 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:19:11.340 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:19:11.362 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@1989276c, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@449b8216, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@5b4c327c, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@18a1ca77, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@48c32c48, org.springframework.test.context.support.DirtiesContextTestExecutionListener@50d09c74, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6ab58bc0, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7cd10693, org.springframework.test.context.event.EventPublishingTestExecutionListener@2d21d42d, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7946cec1, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@3f6bb1a2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@4bfacd42, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@68d9f8ac, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@272613b0, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@45a25057]
+ 2022.08.16 17:19:11.730 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:19:11.754 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29731 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:19:11.759 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:19:12.298 [Test worker] [INFO] c.s.p.AppToDBTest - Started AppToDBTest in 0.87 seconds (JVM running for 7.693)
+ 2022.08.16 17:21:15.284 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:21:15.295 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:21:15.453 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:21:15.475 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@310de133, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@202a16b, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@125bdf74, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@266e9812, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@78b4f195, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6faa0e11, org.springframework.test.context.transaction.TransactionalTestExecutionListener@23c6dcef, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@71ba6e8d, org.springframework.test.context.event.EventPublishingTestExecutionListener@2e5d0176, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@11b8482a, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@40cdf56, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2660175c, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@6070e457, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@33da196b, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@514e9629]
+ 2022.08.16 17:21:15.815 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:21:15.836 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29751 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:21:15.839 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:21:16.269 [Test worker] [INFO] c.s.p.AppToDBTest - Started AppToDBTest in 0.709 seconds (JVM running for 7.404)
+ 2022.08.16 17:26:31.474 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:26:31.504 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 29828 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:26:31.507 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:26:31.541 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:26:31.541 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:26:32.148 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:26:32.209 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:26:32.728 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:26:32.738 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:26:32.738 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:26:32.739 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:26:32.827 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:26:32.828 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1286 ms
+ 2022.08.16 17:26:32.981 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:26:33.042 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:26:33.220 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:26:33.344 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:26:33.602 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:26:33.625 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:26:34.260 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:26:34.268 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:26:35.363 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 17:26:35.385 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:26:35.414 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 17:26:35.425 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.249 seconds (JVM running for 10.077)
+ 2022.08.16 17:27:24.544 [SpringApplicationShutdownHook] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:27:24.546 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown initiated...
+ 2022.08.16 17:27:24.562 [SpringApplicationShutdownHook] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Shutdown completed.
+ 2022.08.16 17:27:44.996 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.skysoo.projectlab.AppToDBTest], using SpringBootContextLoader
+ 2022.08.16 17:27:45.007 [Test worker] [INFO] o.s.t.c.s.AbstractContextLoader - Could not detect default resource locations for test class [com.skysoo.projectlab.AppToDBTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+ 2022.08.16 17:27:45.168 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+ 2022.08.16 17:27:45.190 [Test worker] [INFO] o.s.b.t.c.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@98703fa, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@3c1b6a4c, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@644c6bc1, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@50274bfe, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@610e0ad3, org.springframework.test.context.support.DirtiesContextTestExecutionListener@6a055b4, org.springframework.test.context.transaction.TransactionalTestExecutionListener@13524c2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@6b27f7a1, org.springframework.test.context.event.EventPublishingTestExecutionListener@7aee2084, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@7ee7d798, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@56dcffb2, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@2929037, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@9736ae1, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@49683740, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@78f860b0]
+ 2022.08.16 17:27:45.540 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:27:45.568 [Test worker] [INFO] c.s.p.AppToDBTest - Starting AppToDBTest using Java 11.0.14.1 on pseongsoo.local with PID 29844 (started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:27:45.571 [Test worker] [INFO] c.s.p.AppToDBTest - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:27:46.011 [Test worker] [INFO] c.s.p.AppToDBTest - Started AppToDBTest in 0.751 seconds (JVM running for 7.79)
+ 2022.08.16 17:37:13.723 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:37:13.758 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30024 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:37:13.761 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:37:13.803 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:37:13.804 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:37:14.575 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:37:14.634 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:37:15.237 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:37:15.248 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:37:15.249 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:37:15.249 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:37:15.357 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:37:15.357 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1553 ms
+ 2022.08.16 17:37:15.540 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:37:15.612 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:37:15.828 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:37:15.947 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:37:16.271 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:37:16.297 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:37:17.071 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:37:17.083 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:37:18.365 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 17:37:18.388 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:37:18.421 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 17:37:18.434 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 5.052 seconds (JVM running for 11.089)
+ 2022.08.16 17:37:21.151 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2022.08.16 17:37:21.151 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ 2022.08.16 17:37:21.152 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ 2022.08.16 17:38:42.935 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:38:42.965 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30044 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:38:42.967 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:38:43.002 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:38:43.002 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:38:43.649 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:38:43.705 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 46 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:38:44.216 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:38:44.225 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:38:44.226 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:38:44.226 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:38:44.307 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:38:44.307 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1304 ms
+ 2022.08.16 17:38:44.463 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:38:44.527 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:38:44.696 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:38:44.803 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:38:45.086 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:38:45.108 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:38:45.716 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:38:45.726 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:38:46.868 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 17:38:46.888 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:38:46.917 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 17:38:46.928 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.322 seconds (JVM running for 10.257)
+ 2022.08.16 17:38:51.088 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2022.08.16 17:38:51.089 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ 2022.08.16 17:38:51.090 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ 2022.08.16 17:42:53.431 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 17:42:53.465 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30108 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 17:42:53.467 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 17:42:53.505 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 17:42:53.505 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 17:42:54.197 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 17:42:54.252 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 44 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 17:42:54.832 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 17:42:54.841 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:42:54.842 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 17:42:54.842 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 17:42:54.937 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 17:42:54.938 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1432 ms
+ 2022.08.16 17:42:55.120 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 17:42:55.182 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 17:42:55.386 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 17:42:55.499 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 17:42:55.850 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 17:42:55.875 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 17:42:56.518 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 17:42:56.526 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 17:42:57.673 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 17:42:57.694 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 17:42:57.727 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 17:42:57.738 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.687 seconds (JVM running for 10.721)
+ 2022.08.16 17:42:59.397 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2022.08.16 17:42:59.397 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ 2022.08.16 17:42:59.398 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ 2022.08.16 17:44:10.732 [http-nio-8080-exec-2] [INFO] o.h.e.j.b.i.AbstractBatchImpl - HHH000010: On release of batch it still contained JDBC statements
+ 2022.08.16 18:07:45.244 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:07:45.269 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30438 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:07:45.272 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:07:45.304 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:07:45.304 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:07:45.902 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:07:45.945 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 34 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:07:46.397 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:07:46.406 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:07:46.406 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:07:46.407 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:07:46.483 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:07:46.483 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1178 ms
+ 2022.08.16 18:07:46.582 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 18:07:46.598 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 18:08:20.660 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:08:20.684 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30447 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:08:20.687 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:08:20.718 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:08:20.718 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:08:21.257 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:08:21.301 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:08:21.731 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:08:21.739 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:08:21.740 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:08:21.740 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:08:21.811 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:08:21.811 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1093 ms
+ 2022.08.16 18:08:21.907 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 18:08:21.923 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 18:10:33.799 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:10:33.825 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30491 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:10:33.828 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:10:33.863 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:10:33.863 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:10:34.451 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:10:34.499 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:10:34.958 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:10:34.967 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:10:34.967 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:10:34.967 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:10:35.038 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:10:35.038 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1175 ms
+ 2022.08.16 18:10:35.167 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 18:10:35.217 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 18:10:35.376 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 18:10:35.477 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 18:10:35.723 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 18:10:35.743 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL95Dialect
+ 2022.08.16 18:10:36.341 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 18:10:36.349 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 18:10:37.313 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 18:10:37.330 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:10:37.356 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 18:10:37.366 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 3.876 seconds (JVM running for 9.791)
+ 2022.08.16 18:12:00.555 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:12:00.582 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30510 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:12:00.584 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:12:00.617 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:12:00.617 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:12:01.306 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:12:01.383 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 67 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:12:01.922 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:12:01.933 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:12:01.934 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:12:01.935 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:12:02.027 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:12:02.027 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1410 ms
+ 2022.08.16 18:12:02.178 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.08.16 18:12:02.198 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 2022.08.16 18:14:13.890 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:14:13.920 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30586 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:14:13.924 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:14:13.961 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:14:13.961 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:14:14.576 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:14:14.626 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 41 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:14:15.136 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:14:15.148 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:14:15.148 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:14:15.149 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:14:15.233 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:14:15.233 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1271 ms
+ 2022.08.16 18:14:15.388 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 18:14:15.448 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 18:14:15.608 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 18:14:15.721 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 18:14:16.014 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 18:14:16.034 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+ 2022.08.16 18:14:17.027 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 18:14:17.036 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 18:14:18.120 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 18:14:18.140 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:14:18.168 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 18:14:18.178 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 4.602 seconds (JVM running for 10.555)
+ 2022.08.16 18:15:55.323 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2022.08.16 18:15:55.324 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ 2022.08.16 18:15:55.325 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
+ 2022.08.16 18:17:18.897 [background-preinit] [INFO] o.h.v.i.u.Version - HV000001: Hibernate Validator 6.2.0.Final
+ 2022.08.16 18:17:18.923 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.14.1 on pseongsoo.local with PID 30646 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.08.16 18:17:18.926 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.08.16 18:17:18.960 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.08.16 18:17:18.961 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.08.16 18:17:19.545 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.08.16 18:17:19.592 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 3 JPA repository interfaces.
+ 2022.08.16 18:17:20.048 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.08.16 18:17:20.056 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:17:20.056 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.08.16 18:17:20.056 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.08.16 18:17:20.127 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.08.16 18:17:20.127 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1166 ms
+ 2022.08.16 18:17:20.256 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.08.16 18:17:20.307 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.08.16 18:17:20.458 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.08.16 18:17:20.592 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.08.16 18:17:20.890 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Start completed.
+ 2022.08.16 18:17:20.907 [restartedMain] [INFO] o.h.d.Dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQL57Dialect
+ 2022.08.16 18:17:21.432 [restartedMain] [INFO] o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+ 2022.08.16 18:17:21.440 [restartedMain] [INFO] o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+ 2022.08.16 18:17:22.402 [restartedMain] [INFO] o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+ 2022.08.16 18:17:22.418 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8080"]
+ 2022.08.16 18:17:22.444 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat started on port(s): 8080 (http) with context path ''
+ 2022.08.16 18:17:22.452 [restartedMain] [INFO] c.s.p.MainController - Started MainController in 3.854 seconds (JVM running for 9.742)
+ 2022.08.16 18:18:04.507 [http-nio-8080-exec-1] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+ 2022.08.16 18:18:04.508 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+ 2022.08.16 18:18:04.509 [http-nio-8080-exec-1] [INFO] o.s.w.s.DispatcherServlet - Completed initialization in 1 ms
  

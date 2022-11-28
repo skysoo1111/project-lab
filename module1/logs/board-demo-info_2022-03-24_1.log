@@ -1,0 +1,21 @@
+2022.03.24 16:15:12.796 [restartedMain] [INFO] c.s.p.MainController - Starting MainController using Java 11.0.11 on pseongsoo.local with PID 83284 (/Users/seongsoo/Workspace/personal/project-lab/module1/build/classes/java/main started by seongsoo in /Users/seongsoo/Workspace/personal/project-lab/module1)
+ 2022.03.24 16:15:12.810 [restartedMain] [INFO] c.s.p.MainController - No active profile set, falling back to default profiles: default
+ 2022.03.24 16:15:12.848 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+ 2022.03.24 16:15:12.848 [restartedMain] [INFO] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+ 2022.03.24 16:15:13.427 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+ 2022.03.24 16:15:13.477 [restartedMain] [INFO] o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 40 ms. Found 2 JPA repository interfaces.
+ 2022.03.24 16:15:13.974 [restartedMain] [INFO] o.s.b.w.e.t.TomcatWebServer - Tomcat initialized with port(s): 8080 (http)
+ 2022.03.24 16:15:13.985 [restartedMain] [INFO] o.a.c.h.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8080"]
+ 2022.03.24 16:15:13.986 [restartedMain] [INFO] o.a.c.c.StandardService - Starting service [Tomcat]
+ 2022.03.24 16:15:13.987 [restartedMain] [INFO] o.a.c.c.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+ 2022.03.24 16:15:14.110 [restartedMain] [INFO] o.a.c.c.C.[.[.[/] - Initializing Spring embedded WebApplicationContext
+ 2022.03.24 16:15:14.111 [restartedMain] [INFO] o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1261 ms
+ 2022.03.24 16:15:14.268 [restartedMain] [INFO] o.h.j.i.u.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+ 2022.03.24 16:15:14.329 [restartedMain] [INFO] o.h.Version - HHH000412: Hibernate ORM core version 5.6.1.Final
+ 2022.03.24 16:15:14.474 [restartedMain] [INFO] o.h.a.c.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+ 2022.03.24 16:15:14.584 [restartedMain] [INFO] c.z.h.HikariDataSource - HikariPool-1 - Starting...
+ 2022.03.24 16:15:15.666 [restartedMain] [INFO] o.a.c.c.StandardService - Stopping service [Tomcat]
+ 2022.03.24 16:15:15.678 [restartedMain] [INFO] o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+ 

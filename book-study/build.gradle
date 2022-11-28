@@ -2,15 +2,7 @@ plugins {
     id 'java'
 }
 
-bootJar {
-    enabled(false)
-}
-
-jar {
-    enabled(true)
-}
-
-group 'org.skysoo'
+group 'org.enjoy'
 version '1.0-SNAPSHOT'
 
 repositories {
@@ -18,10 +10,8 @@ repositories {
 }
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
-    implementation 'mysql:mysql-connector-java:8.0.29'
 }
 
 test {
