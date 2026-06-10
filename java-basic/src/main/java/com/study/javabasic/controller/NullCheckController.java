@@ -64,7 +64,7 @@ public class NullCheckController {
             if(vodFileDTOS != null) {
                 List<VodFileDTO> newVodFileDTOS = vodFileDTOS.stream().map(vodFileDTO -> {
                     String stream = VodFileEnum.valueOf(vodFileDTO.getProfile_cd()).getStream();
-                    vodFileDTO.setCont_cd("tvingCd");
+                    vodFileDTO.setCont_cd("Cd");
                     vodFileDTO.setProfile_cd(stream);
                     return vodFileDTO;
                 }).collect(Collectors.toList());
@@ -79,19 +79,19 @@ public class NullCheckController {
     @GetMapping("/paramGet/null")
     public void paramGetNullCheck() {
         Map<String,Object> pipEpiMap = new HashMap<>();
-        List<Map<String, Object>> pipTvingSubtitleInfo = null;
-//        List<Map<String, Object>> pipTvingSubtitleInfo = new ArrayList<>();
-        pipEpiMap.put("pipTvingSubtitleInfo",pipTvingSubtitleInfo);
+        List<Map<String, Object>> subtitleInfo = null;
+//        List<Map<String, Object>> subtitleInfo = new ArrayList<>();
+        pipEpiMap.put("subtitleInfo",subtitleInfo);
 
 
         try {
             Map<String,Object> pgmMap = new HashMap<String,Object>();
-//        if (pipEpiMap.get("pipTvingSubtitleInfo") != null) {
+//        if (pipEpiMap.get("subtitleInfo") != null) {
 //            System.out.println("!=null");
-//            pgmMap.put("pip_subtitle_info", pipEpiMap.get("pipTvingSubtitleInfo")); //PIP 자막 정보
+//            pgmMap.put("pip_subtitle_info", pipEpiMap.get("subtitleInfo")); //PIP 자막 정보
 //        }
 
-            pgmMap.put("pip_subtitle_info", pipEpiMap.get("pipTvingSubtitleInfo"));
+            pgmMap.put("pip_subtitle_info", pipEpiMap.get("subtitleInfo"));
             getList(pgmMap);
 
             System.out.println("1");
