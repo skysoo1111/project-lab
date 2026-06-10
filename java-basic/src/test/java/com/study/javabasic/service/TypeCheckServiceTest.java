@@ -128,7 +128,7 @@ public class TypeCheckServiceTest {
             if(vodFileDTOS != null) {
                 List<VodFileDTO> newVodFileDTOS = vodFileDTOS.stream().map(vodFileDTO -> {
                     String stream = VodFileEnum.valueOf(vodFileDTO.getProfile_cd()).getStream();
-                    vodFileDTO.setCont_cd("tvingCd");
+                    vodFileDTO.setCont_cd("cd");
                     vodFileDTO.setProfile_cd(stream);
                     return vodFileDTO;
                 }).collect(Collectors.toList());
